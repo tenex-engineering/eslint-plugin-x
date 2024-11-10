@@ -1,0 +1,9 @@
+.devcontainer/
+.vscode/
+
+dist/
+node_modules/
+
+compose.override.yaml
+
+core.*
