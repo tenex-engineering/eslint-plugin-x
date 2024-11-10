@@ -1,6 +1,6 @@
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 import * as fs from 'node:fs'
-import { organizeImports } from '#package/rules/organize-imports/index.js'
+import organizeImports from '#package/rules/organize-imports/index.js'
 
 const { name, version } = JSON.parse(
   fs.readFileSync(new URL('../package.json', import.meta.url), 'utf-8'),

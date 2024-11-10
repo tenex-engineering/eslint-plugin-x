@@ -1,6 +1,6 @@
 import { ESLintUtils } from '@typescript-eslint/utils'
 
-export const organizeImports = ESLintUtils.RuleCreator(
+export default ESLintUtils.RuleCreator(
   (name) =>
     `https://github.com/tenex-engineering/eslint-plugin-x/rules/${name}/README.md`,
 )({
@@ -70,7 +70,7 @@ export const organizeImports = ESLintUtils.RuleCreator(
                     }
 
                     segments.push(
-                      `${specifier.local.name} } from '${declaration.source.value}';`,
+                      `${specifier.local.name} } from '${declaration.source.value}'`,
                     )
 
                     return segments.join(' ')
@@ -84,14 +84,14 @@ export const organizeImports = ESLintUtils.RuleCreator(
                     }
 
                     segments.push(
-                      `${specifier.local.name} from '${declaration.source.value}';`,
+                      `${specifier.local.name} from '${declaration.source.value}'`,
                     )
 
                     return segments.join(' ')
                   }
 
                   if (specifier.type === 'ImportNamespaceSpecifier') {
-                    return `import * as ${specifier.local.name} from '${declaration.source.value}';`
+                    return `import * as ${specifier.local.name} from '${declaration.source.value}'`
                   }
                 })
                 .join('\n')
