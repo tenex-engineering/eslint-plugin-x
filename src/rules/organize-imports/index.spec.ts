@@ -5,12 +5,12 @@ import { ts } from '#package/utils/tagged-templates.js'
 ruleTester.run('organize-imports', rule, {
   valid: [
     ts`
-      import type { foo } from 'bar'
+      import type { a } from 'module'
     `,
 
     ts`
-      import { foo } from 'bar'
-      import { goo } from 'bar'
+      import { a } from 'module'
+      import { b } from 'module'
     `,
   ],
 
@@ -18,59 +18,59 @@ ruleTester.run('organize-imports', rule, {
     {
       errors: [{ messageId: 'avoidMultipleSpecifiersImports' }],
       code: ts`
-        import { foo, goo } from 'bar'
+        import { a, b } from 'module'
       `,
       output: ts`
-        import { foo } from 'bar'
-        import { goo } from 'bar'
+        import { a } from 'module'
+        import { b } from 'module'
       `,
     },
 
     {
       errors: [{ messageId: 'avoidMultipleSpecifiersImports' }],
       code: ts`
-        import { type foo, type goo } from 'bar'
+        import { type a, type b } from 'module'
       `,
       output: ts`
-        import { type foo } from 'bar'
-        import { type goo } from 'bar'
+        import { type a } from 'module'
+        import { type b } from 'module'
       `,
     },
 
     {
       errors: [{ messageId: 'avoidMultipleSpecifiersImports' }],
       code: ts`
-        import type { foo, goo } from 'bar'
+        import type { a, b } from 'module'
       `,
       output: ts`
-        import type { foo } from 'bar'
-        import type { goo } from 'bar'
+        import type { a } from 'module'
+        import type { b } from 'module'
       `,
     },
 
     {
       errors: [{ messageId: 'avoidUnsortedImports' }],
       code: ts`
-        import { goo } from 'bar'
+        import { b } from 'module'
         // comment
-        import { foo } from 'bar'
+        import { a } from 'module'
       `,
       output: ts`
         // comment
-        import { foo } from 'bar'
-        import { goo } from 'bar'
+        import { a } from 'module'
+        import { b } from 'module'
       `,
     },
 
     {
       errors: [{ messageId: 'avoidUnsortedImports' }],
       code: ts`
-        import { goo } from 'bar'
-        import { foo as doo } from 'bar'
+        import { b } from 'module'
+        import { c as a } from 'module'
         `,
       output: ts`
-        import { foo as doo } from 'bar'
-        import { goo } from 'bar'
+        import { c as a } from 'module'
+        import { b } from 'module'
       `,
     },
   ],
