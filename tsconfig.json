@@ -26,8 +26,8 @@
     "declaration": true,
     "declarationMap": true,
 
-    // Enable latest ES and DOM features
-    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    // Enable latest ES features
+    "lib": ["ES2023"],
 
     // Ensure color and formatting when compiler output is piped, e.g. through Docker
     "pretty": true
