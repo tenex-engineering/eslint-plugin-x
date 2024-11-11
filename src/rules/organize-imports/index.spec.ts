@@ -1,6 +1,6 @@
-import rule from './index.js'
-import { ruleTester } from '#package/tests/rule-tester.js'
-import { ts } from '#package/utils/tagged-templates.js'
+import rule from './index'
+import { ruleTester } from '#package/tests/rule-tester'
+import { ts } from '#package/utils/tagged-templates'
 
 ruleTester.run('organize-imports', rule, {
   valid: [

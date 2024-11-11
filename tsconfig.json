@@ -20,11 +20,15 @@
     "noImplicitOverride": true,
 
     // Transpilation
-    "module": "NodeNext",
+    // "module": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "outDir": "dist",
-    "sourceMap": true,
+    "declarationDir": "./dist/types",
+    "emitDeclarationOnly": true,
+    // "sourceMap": true,
     "declaration": true,
-    "declarationMap": true,
+    // "declarationMap": true,
 
     // Enable latest ES features
     "lib": ["ES2023"],
