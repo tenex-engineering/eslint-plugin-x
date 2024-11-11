@@ -46,6 +46,7 @@ export default [
       ],
       'object-shorthand': ['warn', 'properties'],
       'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
+      'import/first': 'error',
       'import/no-duplicates': 'off',
       'import/no-empty-named-blocks': 'error',
       'import/no-unresolved': 'off',
