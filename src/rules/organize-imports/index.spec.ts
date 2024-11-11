@@ -1,5 +1,5 @@
 import rule from './index.js'
-import { ruleTester } from '#package/tests/rules-tester.js'
+import { ruleTester } from '#package/tests/rule-tester.js'
 import { ts } from '#package/utils/tagged-templates.js'
 
 ruleTester.run('organize-imports', rule, {
