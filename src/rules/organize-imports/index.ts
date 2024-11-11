@@ -1,9 +1,6 @@
-import { ESLintUtils } from '@typescript-eslint/utils'
+import { createRule } from '#package/tests/rule-creator.js'
 
-export default ESLintUtils.RuleCreator(
-  (name) =>
-    `https://github.com/tenex-engineering/eslint-plugin-x/rules/${name}/README.md`,
-)({
+export default createRule({
   name: 'organize-imports',
   meta: {
     type: 'suggestion',
