@@ -1,6 +1,8 @@
 import rule from './index.js'
-import { ruleTester } from '#package/tests/rule-tester.js'
-import { ts } from '#package/utils/tagged-templates.js'
+import { RuleTester } from '@typescript-eslint/rule-tester'
+import { ts } from '#package/testing/utils/tagged-templates.js'
+
+export const ruleTester = new RuleTester()
 
 ruleTester.run('organize-imports', rule, {
   valid: [

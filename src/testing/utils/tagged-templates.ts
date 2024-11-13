@@ -3,7 +3,7 @@ export function ts(strings: TemplateStringsArray) {
     .map((string) =>
       string
         .split('\n')
-        .map((sub) => sub.trim())
+        .map((line) => line.trim())
         .join('\n'),
     )
     .join('\n')

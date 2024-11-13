@@ -1,4 +1,4 @@
-import { createRule } from '#package/tests/rule-creator.js'
+import { createRule } from '#package/utils/create-rule.js'
 
 export default createRule({
   name: 'organize-imports',

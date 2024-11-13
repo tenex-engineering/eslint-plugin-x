@@ -12,7 +12,7 @@ export default defineConfig({
 
   test: {
     setupFiles: [
-      fileURLToPath(new URL('./src/tests/setup.ts', import.meta.url)),
+      fileURLToPath(new URL('./src/testing/vitest-setup.ts', import.meta.url)),
     ],
   },
 })
