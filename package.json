@@ -41,6 +41,7 @@
   "imports": {
     "#package/*": "./dist/*"
   },
+  "packageManager": "pnpm@9.12.1",
   "dependencies": {
     "@typescript-eslint/utils": "^8.13.0"
   },
