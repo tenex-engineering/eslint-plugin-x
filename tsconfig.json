@@ -22,9 +22,7 @@
     // Transpilation
     "module": "NodeNext",
     "outDir": "dist",
-    "sourceMap": true,
     "declaration": true,
-    "declarationMap": true,
 
     // Enable latest ES features
     "lib": ["ES2023"],
