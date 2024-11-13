@@ -1,6 +1,6 @@
 {
   "name": "@txe/eslint-plugin-x",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "ESlint Plugin X",
   "type": "module",
   "main": "./dist/index.js",
