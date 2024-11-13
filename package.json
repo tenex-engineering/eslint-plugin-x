@@ -50,6 +50,7 @@
     "@changesets/cli": "^2.27.9",
     "@eslint/compat": "^1.2.2",
     "@stylistic/eslint-plugin-js": "^2.10.1",
+    "@txe/eslint-plugin-x": "^0.1.0",
     "@types/node": "^22.9.0",
     "@typescript-eslint/rule-tester": "^8.13.0",
     "concurrently": "^9.1.0",
