@@ -5,19 +5,10 @@ import eslintPluginJs from '@eslint/js'
 import eslintPluginStylistic from '@stylistic/eslint-plugin'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import eslintPluginX from '@txe/eslint-plugin-x'
-import eslintToolingTs from 'typescript-eslint'
-import { fileURLToPath } from 'node:url'
+import * as eslintToolingTs from 'typescript-eslint'
 import globals from 'globals'
-import { includeIgnoreFile } from '@eslint/compat'
-import path from 'node:path'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const gitignorePath = path.resolve(__dirname, '.gitignore')
 
 export default eslintToolingTs.config(
-  includeIgnoreFile(gitignorePath),
-
   eslintPluginJs.configs.recommended,
   {
     rules: {
@@ -29,9 +20,7 @@ export default eslintToolingTs.config(
     },
   },
 
-  // eslint-disable-next-line import/no-named-as-default-member
   ...eslintToolingTs.configs.strict,
-  // eslint-disable-next-line import/no-named-as-default-member
   ...eslintToolingTs.configs.stylistic,
   {
     rules: {
@@ -50,20 +39,12 @@ export default eslintToolingTs.config(
     rules: {
       'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
       'import/first': 'error',
-      'import/namespace': 'warn',
       'import/no-duplicates': 'off',
       'import/no-empty-named-blocks': 'warn',
       'import/newline-after-import': 'warn',
-      // https://github.com/import-js/eslint-plugin-import/issues/3076
-      'import/no-unresolved': 'off',
-    },
-  },
-  {
-    files: ['src/**/*'],
-    rules: {
       'import/no-extraneous-dependencies': [
         'error',
-        { devDependencies: ['src/**/*.spec.*', 'src/testing/**/*'] },
+        { devDependencies: ['*', 'src/**/*.spec.*', 'src/testing/**/*'] },
       ],
     },
   },
@@ -106,4 +87,8 @@ export default eslintToolingTs.config(
 
   eslintConfigPrettier,
   ...eslintPluginX.configs.recommended,
+
+  {
+    ignores: ['dist/'],
+  },
 )
