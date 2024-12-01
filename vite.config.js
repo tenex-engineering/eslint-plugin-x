@@ -1,5 +1,3 @@
-/// <reference types="vitest/config" />
-
 import { defineConfig } from 'vite'
 import { fileURLToPath } from 'node:url'
 
@@ -8,11 +6,5 @@ export default defineConfig({
     alias: {
       '#package': fileURLToPath(new URL('./src', import.meta.url)),
     },
-  },
-
-  test: {
-    setupFiles: [
-      fileURLToPath(new URL('./src/testing/vitest-setup.ts', import.meta.url)),
-    ],
   },
 })

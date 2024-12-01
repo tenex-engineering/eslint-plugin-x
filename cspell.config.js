@@ -1,10 +1,10 @@
-'use strict'
-
 /** @type { import("@cspell/cspell-types").CSpellUserSettings } */
-// eslint-disable-next-line no-undef
-module.exports = {
+export default {
   version: '0.2',
   language: 'en',
+  useGitignore: true,
+  dictionaries: ['words'],
+
   dictionaryDefinitions: [
     {
       name: 'words',
@@ -12,5 +12,4 @@ module.exports = {
       addWords: true,
     },
   ],
-  dictionaries: ['words'],
 }
