@@ -41,7 +41,6 @@
   "imports": {
     "#package/*": "./dist/*"
   },
-  "packageManager": "pnpm@9.12.1",
   "dependencies": {
     "@typescript-eslint/utils": "^8.13.0"
   },
@@ -49,12 +48,14 @@
     "@arethetypeswrong/cli": "^0.16.4",
     "@changesets/cli": "^2.27.9",
     "@eslint/compat": "^1.2.2",
+    "@eslint/js": "^9.16.0",
     "@stylistic/eslint-plugin-js": "^2.10.1",
     "@txe/eslint-plugin-x": "^0.1.0",
     "@types/node": "^22.9.0",
     "@typescript-eslint/rule-tester": "^8.13.0",
     "concurrently": "^9.1.0",
     "cspell": "^8.16.0",
+    "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-unicorn": "^56.0.0",

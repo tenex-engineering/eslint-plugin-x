@@ -13,5 +13,4 @@ module.exports = {
     },
   ],
   dictionaries: ['words'],
-  ignorePaths: ['.devcontainer', 'pnpm-lock.yaml'],
 }
