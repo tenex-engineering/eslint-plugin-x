@@ -10,7 +10,7 @@ FROM node-base AS deps
 WORKDIR /app/
 
 RUN --mount=type=bind,source=package.json,target=package.json \
-    --mount=type=bind,source=yarn.lock,target=y \
+    --mount=type=bind,source=yarn.lock,target=yarn.lock \
     --mount=type=cache,target=/usr/local/share/.cache/yarn/ \
     yarn install --frozen-lockfile
 
