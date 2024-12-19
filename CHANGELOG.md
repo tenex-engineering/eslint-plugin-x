@@ -1,5 +1,11 @@
 # @txe/eslint-plugin-x
 
+## 0.2.1
+
+### Patch Changes
+
+- 0af9756: fix
+
 ## 0.2.0
 
 ### Minor Changes
