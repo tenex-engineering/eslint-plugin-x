@@ -40,6 +40,7 @@ export default eslintToolingTs.config(
       'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
       'import/first': 'error',
       'import/no-duplicates': 'off',
+      'import/no-unresolved': 'off',
       'import/no-empty-named-blocks': 'warn',
       'import/newline-after-import': 'warn',
       'import/no-extraneous-dependencies': [
