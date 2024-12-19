@@ -18,6 +18,7 @@ const final = {
   configs: {
     recommended: [
       {
+        name: 'x/recommended',
         plugins: {
           x: base,
         },
